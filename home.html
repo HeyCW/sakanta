@@ -7,8 +7,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://kit.fontawesome.com/fc45e0c6e7.js" crossorigin="anonymous"></script>
+
+<!-- Open Sauce -->
+<link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet"> 
+
+<!-- Urbanist -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+                
 
   <style>
+    body{
+      /* Open Sauce */
+      /* font-family: 'Open Sauce One', sans-serif; */
+
+      /* Urbanist */
+      font-family: "Urbanist", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal; 
+    }
+
     .nav-hidden {
       transform: translateY(-100%);
     }
@@ -44,7 +64,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
 </head>
-<body class="relative overflow-x-hidden bg-[#2f4233]">
+<body class="relative overflow-x-hidden bg-[#1F3222]">
 
   <div id="userModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
     <div class="bg-white p-6 rounded-xl shadow-xl w-80 relative">
@@ -149,85 +169,81 @@
           
       </div>
         
-      <div class="text-black font-bold text-5xl mb-10">A curated real estate portfolio</div>
-      <p class="text-black text-xl w-[80%] mx-auto mb-20" >Pacaso’s portfolio of elite vacation homes spans more than 40 markets around the world. We apply our sophisticated eye to interior design, art selection, home amenities and ongoing estate management.</p>
+      <div class="text-[#FFFBF2] font-bold text-2xl mb-10">A Curated Real Estate Portfolio</div>
+      <p class="text-[#FFFBF2] w-[70%] mx-auto mb-20" >Pacaso’s portfolio of elite vacation homes spans more than 40 markets around the world. We apply our sophisticated eye to interior design, art selection, home amenities and ongoing estate management.</p>
 
 
         <div>
-            <div class="w-[80%] relative mx-auto px-4 h-[69vh] md:h-[50vh] lg:h-[45vh] xl:h-[70vh] mb-16">
+            <div class="w-[70%] relative mx-auto px-4 h-[69vh] md:h-[50vh] lg:h-[45vh] xl:h-[70vh] mb-16">
                 <!-- Carousel Content -->
-                <div class="overflow-x-hidden overflow-y-hidden relative h-[65vh] md:h-[50vh] lg:h-[40vh] xl:h-[60vh]">
-                    <div id="carousel-track" class="flex gap-x-[10px] transition-transform duration-500">
+                <div class="overflow-x-hidden overflow-y-hidden relative h-[65vh] md:h-[50vh] lg:h-[40vh] xl:h-[57vh]">
+                    <div id="carousel-track" class="flex gap-x-[20px] transition-transform duration-500 items-stretch h-full">
                         <!-- Card 1 -->
-                      
-                        <a href="learn-more.html" class="min-w-full md:min-w-[48%] lg:min-w-[32.5%] rounded-xl shadow-md h-[450px] flex flex-col bg-[#FAF3E1] text-[#21281F]">
-                          <img class="w-full object-cover h-1/2 rounded-t-xl" src="/villa1.jpg" alt="Sunset in the mountains">
+                        <a href="learn-more.html" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
+                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa1.jpg" alt="Sunset in the mountains">
                           
-                          <div class="flex flex-col justify-between h-1/2 px-4 py-2">
+                          <div class="flex flex-col justify-between flex-1 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-2xl text-start p-2 pl-5 font-bold text-[#21281F]">Villa 1</h2>
-                              <p class="text-start pl-5 text-[#21281F]"><strong>$900,000</strong> <span class="ml-2">1/8 ownership</span></p>
-                              <p class="text-start pl-5 font-semibold text-[#21281F]">5 bds | 6 ba | 4,761 sq ft</p>
-                              <p class="text-start pl-5 font-semibold text-[#21281F]">127 Blue Heron Pond Rd, Kiawah Island, SC 29455</p>
+                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa 1</h2>
+                              <p class="text-start text-sm text-[#253A28]"><span class = "font-semibold">$900,000</span> <span class="ml-2">1/8 ownership</span></p>
+                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">5 <i class="fa-solid fa-bed"></i> | 6 <i class="fa-solid fa-bath"></i> | 4,761 sq ft</p>
+                              <p class="leading-tight text-sm text-start text-[#253A28]">127 Blue Heron Pond Rd, Kiawah Island, SC 29455</p>
                             </div>
-                            
-                            <!-- <div class="pl-5 pb-4">
-                              <a class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition flex justify-start w-[35vw] md:w-[17vw] lg:w-[13vw] xl:w-[36%]" href="learn-more.html">Learn More</a>
-                            </div> -->
                           </div>
                         </a>
 
                         <!-- Card 2 -->
-                        <a class="min-w-full md:min-w-[48%] lg:min-w-[32.5%] rounded-xl shadow-md h-[450px] flex flex-col bg-[#FAF3E1] text-[#21281F]">
-                          <img class="w-full object-cover h-1/2 rounded-t-xl" src="/villa2.jpg" alt="Sunset in the mountains">
-                          <div class="flex flex-col justify-between h-1/2">
+                        <a href="#" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
+                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa2.jpg" alt="Sunset in the mountains">
+                          <div class="flex flex-col justify-between flex-1 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-2xl text-start p-2 pl-5 font-bold">Villa 7</h2>
-                              <p class="text-start pl-5 text-xl"><strong>$1,250,000</strong> <span class="ml-2">1/4 ownership</span></p>
-                              <p class="text-start pl-5 font-semibold">4 bds | 5 ba | 5,230 sq ft</p>
-                              <p class="text-start pl-5 font-semibold">88 Sunset Bluff Dr, Big Sky, MT 59716</p>
+                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa 7</h2>
+                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$1,250,000</span> <span class="ml-2">1/4 ownership</span></p>
+                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">4 <i class="fa-solid fa-bed"></i> | 5 <i class="fa-solid fa-bath"></i> | 5,230 sq ft</p>
+                              <p class="leading-tight text-sm text-start text-[#253A28]">88 Sunset Bluff Dr, Big Sky, MT 59716</p>
                             </div>
                           </div>
                         </a>
 
                         <!-- Card 3 -->
-                        <div class="min-w-full md:min-w-[48%] lg:min-w-[32.5%] rounded-xl shadow-md h-[450px] flex flex-col bg-[#FAF3E1] text-[#21281F]">
-                          <img class="w-full object-cover h-1/2 rounded-t-xl" src="/villa3.jpg" alt="Sunset in the mountains">
-                          <div class="flex flex-col justify-between h-1/2">
+                        <a href="#" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
+                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa3.jpg" alt="Sunset in the mountains">
+                          <div class="flex flex-col justify-between flex-1 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-2xl text-start p-2 pl-5 font-bold">Villa Serenity</h2>
-                              <p class="text-start pl-5 text-xl"><strong>$780,000</strong> <span class="ml-2">1/10 ownership</span></p>
-                              <p class="text-start pl-5 font-semibold">3 bds | 4 ba | 3,600 sq ft</p>
-                              <p class="text-start pl-5 font-semibold">15 Ocean Breeze Way, Malibu, CA 90265</p>
+                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa Serenity</h2>
+                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$780,000</span> <span class="ml-2">1/10 ownership</span></p>
+                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">3 <i class="fa-solid fa-bed"></i> | 4 <i class="fa-solid fa-bath"></i> | 3,600 sq ft</p>
+                              <p class="leading-tight text-start text-sm text-[#253A28]">15 Ocean Breeze Way, Malibu, CA 90265</p>
                             </div>
                           </div>
-                        </div>
+                        </a>
 
                         <!-- Card 4 -->
-                        <div class="min-w-full md:min-w-[48%] lg:min-w-[32.5%] rounded-xl shadow-md h-[450px] flex flex-col bg-[#FAF3E1] text-[#21281F]">
-                          <img class="w-full object-cover h-1/2 rounded-t-xl" src="/villa4.jpg" alt="Sunset in the mountains">
-                          <div class="flex flex-col justify-between h-1/2">
+                        <a href="#" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
+                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa4.jpg" alt="Sunset in the mountains">
+                          <div class="flex flex-col justify-between h-2/5 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-2xl text-black text-start p-2 pl-5 font-bold">Villa Horizon</h2>
-                              <p class="text-gray-600 text-start pl-5 text-xl"><strong>$2,150,000</strong> <span class="ml-2">1/6 ownership</span></p>
-                              <p class="text-gray-600 text-start pl-5 font-semibold">6 bds | 7 ba | 7,100 sq ft</p>
-                              <p class="text-gray-600 text-start pl-5 font-semibold">302 Palm Drive, Naples, FL 34102</p>
+                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa Horizon</h2>
+                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$2,150,000</span> <span class="ml-2">1/6 ownership</span></p>
+                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">6 <i class="fa-solid fa-bed"></i> | 7 <i class="fa-solid fa-bath"></i> | 7,100 sq ft</p>
+                              <p class="leading-tight text-start text-sm text-[#253A28]">302 Palm Drive, Naples, FL 34102</p>
                             </div>
                           </div>
-                        </div>
+                        </a>
 
                         <!-- Card 5 -->
-                        <div class="min-w-full md:min-w-[48%] lg:min-w-[32.5%] rounded-xl shadow-md h-[450px] flex flex-col bg-[#FAF3E1] text-[#21281F]">
-                          <img class="w-full object-cover h-1/2 rounded-t-xl" src="/villa5.jpg" alt="Sunset in the mountains">
-                          <div class="flex flex-col justify-between h-1/2">
+                        <a href="#" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
+                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa5.jpg" alt="Sunset in the mountains">
+                          <div class="flex flex-col justify-between h-2/5 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-2xl text-black text-start p-2 pl-5 font-bold">Villa Nova</h2>
-                              <p class="text-gray-600 text-start pl-5 text-xl"><strong>$985,000</strong> <span class="ml-2">1/8 ownership</span></p>
-                              <p class="text-gray-600 text-start pl-5 font-semibold">4 bds | 5 ba | 4,020 sq ft</p>
-                              <p class="text-gray-600 text-start pl-5 font-semibold">219 Maple Ridge Ln, Aspen, CO 81611</p>
+                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa Nova</h2>
+                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$985,000</span> <span class="ml-2">1/8 ownership</span></p>
+                              <p class="text-start font-medium text-sm mb-3 text-[#253A28]">4 <i class="fa-solid fa-bed"></i> | 5 <i class="fa-solid fa-bath"></i> | 4,020 sq ft</p>
+                              <p class="leading-tight text-start text-sm text-[#253A28]">219 Maple Ridge Ln, Aspen, CO 81611</p>
                             </div>
                           </div>
-                        </div>
+                        </a>
+
                     </div>
                 </div>
 
