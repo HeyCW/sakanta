@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-<body>
+<body class="bg-[#FAF3E1]">
 
     <div id="userModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white p-6 rounded-xl shadow-xl w-80 relative">
@@ -41,21 +41,30 @@
     </div>
 
   <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 shadow-sm transition-transform duration-300 bg-white">
-    <div class="hover:text-blue-400 text-blue-300 text-2xl font-bold">MyBrand</div>
-    <ul class="hidden md:flex space-x-6 text-white font-medium">
-      <li><a href="#" class="hover:text-blue-400 hover:font-bold text-blue-300 transition font-semibold">Home</a></li>
-      <li><a href="#" class="hover:text-blue-400 hover:font-bold text-blue-300 transition font-semibold">About</a></li>
-      <li><a href="#" class="hover:text-blue-400 hover:font-bold text-blue-300 transition font-semibold">Services</a></li>
-      <li><a href="#" class="hover:text-blue-400 hover:font-bold text-blue-300 transition font-semibold">Contact</a></li>
-      <li><i class="fa-solid fa-circle-user text-blue-300 text-2xl"></i></li>
-    </ul>
-    <button class="md:hidden text-white">
-      <!-- Hamburger icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-blue-400 hover:font-bold text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-4 2xl:py-6 shadow-sm transition-transform duration-300 bg-[#021E05]">
+    
+    <div class="flex items-center justify-between w-5/6 mx-auto">
+      <div class="text-[#FFFBF2] hover:text-[#E5DFC9] text-xl xl:text-2xl 2xl:text-3xl font-bold">MyBrand</div>
+      <ul class="hidden md:flex space-x-6 text-white font-medium">
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Home</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">About</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Services</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Contact</a></li>
+        <li>
+          <button onclick="toggleModal()" class="focus:outline-none">
+            <i class="fa-solid fa-circle-user text-[#FFFBF2] hover:text-[#E5DFC9] text-xl 2xl:text-2xl"></i>
+          </button>
+        </li>
+      </ul>
+      <button class="md:hidden text-white">
+        <!-- Hamburger icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-blue-400 hover:font-bold text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    
   </nav>
 
 
@@ -66,17 +75,17 @@
 
 <div class="w-full relative mx-auto pt-20">
 
-    <div class="absolute top-0 left-0 w-full h-[70vh] bg-gradient-to-b from-blue-300 to-blue-700 z-0"></div>
+    <div class="absolute top-0 left-0 w-full h-[70vh] bg-[#021E05] z-0"></div>
 
     <div class="relative z-10 w-4/5 mx-auto text-gray-800">
-        <h1 class="text-center text-sm sm:text-lg md:text-xl mb-5">PRIVATE VILLAS</h1>
+        <h1 class="text-center text-sm sm:text-lg md:text-xl mb-5 mt-10 text-[#EBB902]">PRIVATE VILLAS</h1>
 
-        <div class="flex flex-col md:flex-row items-center justify-between p-4 rounded-lg mb-10">
-        <button onclick="window.history.back()" class="text-black font-semibold hover:underline">
+        <div class="flex flex-col md:flex-row items-center justify-between p-4 rounded-lg mb-10 ">
+        <button onclick="window.history.back()" class="text-[#FAF3E1] font-semibold hover:underline">
             ← Back
         </button>
 
-        <h1 class="text-2xl sm:text-4xl md:text-7xl font-bold text-gray-800 text-center">
+        <h1 class="text-2xl sm:text-4xl md:text-7xl font-bold text-[#FAF3E1] text-center">
             Panoramic Pool Villa
         </h1>
 
@@ -161,13 +170,13 @@
 
 
     
-    <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 w-4/5 mx-auto mt-36">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 w-4/5 mx-auto px-60 py-10 mt-36 bg-[#021E05] w-full">
         <div>
-            <div class="w-4/5 mx-auto text-gray-800 text-3xl font-thin mb-10">
+            <div class="w-4/5 mx-auto text-3xl mb-10 text-[#FAF3E1] font-bold">
                 Features
             </div>
 
-            <ul class="w-4/5 mx-auto mt-4 list-disc list-inside text-md text-gray-700 space-y-2">
+            <ul class="w-4/5 mx-auto mt-4 list-disc list-inside text-md space-y-2 text-[#FAF3E1]">
                 <li>Raffles Wellbeing Butler Service</li>
                 <li>Panoramic ocean view</li>
                 <li>Spacious private terrace</li>
@@ -203,22 +212,23 @@
             <div class="flex flex-col justify-center items-start p-10 rounded-xl">
                 <h2 class="text-3xl font-bold mb-4">Book Your Stay</h2>
                 <p class="mb-6">Experience the luxury and tranquility of our Panoramic Pool Villa. Book now for an unforgettable getaway.</p>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-                    Book Now
-                </button>
             </div>
             <div class="flex justify-center items-center h-full">
-                <div class="h-full mt-20 w-4/5 bg-white rounded-xl shadow-xl p-6 flex flex-col">
-                    <h3 class="text-4xl font-semibold text-black mb-4">Contact Us</h3>
-                    <p class="text-xl mb-10 text-black">For inquiries or special requests, please reach out to us.</p>
+                <div class="h-full mt-20 w-4/5 bg-white rounded-xl shadow-xl p-6 flex flex-col bg-opacity-70 backdrop-blur-lg">
+                    <h3 class="text-4xl font-semibold text-[#021E05] mb-4">Contact Us</h3>
+                    <p class="text-xl mb-10 text-[#021E05]">For inquiries or special requests, please reach out to us.</p>
                     <form class="flex flex-col flex-grow justify-between h-full">
                         <div>
-                            <input type="text" placeholder="Your Name" class="w-full p-2 mb-4 border rounded">
-                            <input type="email" placeholder="Your Email" class="w-full p-2 mb-4 border rounded">
-                            <textarea placeholder="Your Message" class="w-full p-2 mb-4 border rounded"></textarea>
+                            <input
+                              type="text"
+                              placeholder="Your Name"
+                              class="w-full p-2 mb-4 border rounded opacity-70 placeholder-opacity-70 placeholder-gray-500"
+                            />
+                            <input type="email" placeholder="Your Email" class="w-full p-2 mb-4 border rounded opacity-70 placeholder-opacity-70 placeholder-gray-500">
+                            <textarea placeholder="Your Message" class="w-full p-2 mb-4 border rounded opacity-70 placeholder-opacity-70 placeholder-gray-500"></textarea>
                         </div>
                         <div class="mt-auto text-left mb-10">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                            <button type="submit" class="bg-[#021E05] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                             Send Message
                             </button>
                         </div>
