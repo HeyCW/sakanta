@@ -64,7 +64,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
 </head>
-<body class="relative overflow-x-hidden bg-[#1F3222]">
+<body class="relative overflow-x-hidden bg-[#FFFBF2]">
 
   <div id="userModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
     <div class="bg-white p-6 rounded-xl shadow-xl w-80 relative">
@@ -87,32 +87,36 @@
     </div>
   </div>
 
-  <!-- Video Background -->
-<section id="hero" class="relative w-full h-screen bg-black">
-  <!-- Video sebagai latar belakang -->
-  <video src="home2.mp4" autoplay muted loop class="w-full h-full object-cover"></video>
+    <!-- Video Background -->
+  <section id="hero" class="relative w-full h-screen bg-black">
+    <!-- Video sebagai latar belakang -->
+    <video src="home2.mp4" autoplay muted loop class="w-full h-full object-cover"></video>
 
-  <!-- Overlay tulisan di atas video -->
-  <div class="absolute inset-0 flex flex-col items-start justify-center text-start text-white px-4 md:px-36">
-    <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-4">Selamat Datang di MyBrand</h1>
-    <p id="hero-text" class="text-lg md:text-2xl">Platform terbaik untuk belajar coding dan teknologi masa depan</p>
-  </div>
-</section>
+      <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Overlay tulisan di atas video -->
+    <div class="z-[10] absolute inset-0 flex flex-col items-center justify-center text-start text-[#FFFBF2] px-4 md:px-36">
+      <h1 id="hero-title" class="text-center text-4xl md:text-6xl font-bold mb-4">Own a Slice of Paradise. <span class = "text-[#EBB902]"> Pay a Fraction of the Price.</span></h1>
+      <p id="hero-text" class="text-center text-lg md:text-2xl">Co-own your dream property and escape anytime, effortlessly. </p>
+      <button id="hero-button" class = "mt-10 w-fit px-4 py-2 border-[1px] border-[#EBB902] hover:bg-[#EBB902] hover:text-[#FFFBF2] transition duration-300">How does it work?</button>
+    </div>
+  </section>
 
 
   <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 shadow-sm transition-transform duration-300 bg-[#405743]">
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-4 2xl:py-6 shadow-sm transition-transform duration-300 bg-[#021E05]">
     
     <div class="flex items-center justify-between w-5/6 mx-auto">
-      <div class="text-[#FAF3E1] hover:text-[#E5DFC9] text-3xl font-bold">MyBrand</div>
+      <div class="text-[#FFFBF2] hover:text-[#E5DFC9] text-xl xl:text-2xl 2xl:text-3xl font-bold">MyBrand</div>
       <ul class="hidden md:flex space-x-6 text-white font-medium">
-        <li><a href="#" class="text-[#FAF3E1] hover:text-[#E5DFC9] hover:font-bold transition font-semibold text-xl">Home</a></li>
-        <li><a href="#" class="text-[#FAF3E1] hover:text-[#E5DFC9] hover:font-bold transition font-semibold text-xl">About</a></li>
-        <li><a href="#" class="text-[#FAF3E1] hover:text-[#E5DFC9] hover:font-bold transition font-semibold text-xl">Services</a></li>
-        <li><a href="#" class="text-[#FAF3E1] hover:text-[#E5DFC9] hover:font-bold transition font-semibold text-xl">Contact</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Home</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">About</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Services</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Contact</a></li>
         <li>
           <button onclick="toggleModal()" class="focus:outline-none">
-            <i class="fa-solid fa-circle-user text-[#FAF3E1] hover:text-[#E5DFC9] text-2xl"></i>
+            <i class="fa-solid fa-circle-user text-[#FFFBF2] hover:text-[#E5DFC9] text-xl 2xl:text-2xl"></i>
           </button>
         </li>
       </ul>
@@ -128,66 +132,156 @@
   </nav>
 
   <!-- Content -->
-  <div class="pt-32 text-black text-center relative z-10">
-    <div class="h-screen">
+    <div class="relative z-10">
+      <!-- <div class = "flex w-5/6 px-6 mx-auto flex-col items-start justify-center text-center">
 
-        <div>
+        <div class = "text-5xl font-semibold mb-20">Lorem ipsum dolor sit amet.</div>
+        <div class = "flex justify-center items-center gap-4">
+          <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 flex flex-col items-start justify-center">
+            <div class = "text-start text-2xl font-semibold mb-2">01</div>
+            <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+            <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+          </div>
+
+          <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 flex flex-col items-start justify-center">
+            <div class = "text-start text-2xl font-semibold mb-2">01</div>
+            <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+            <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+          </div>
+
+          <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 flex flex-col items-start justify-center">
+            <div class = "text-start text-2xl font-semibold mb-2">01</div>
+            <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+            <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+          </div>  
+        </div>
+      </div> -->
+
+       <!-- Alternatif Page 1 -->
+        <!-- <div class = "text-[#021E05] min-h-screen bg-[#FFFBF2] py-28">
+          <div>
             <div class="hidden lg:flex container overflow-x-auto min-w-max ">
                 <div class="flex-shrink-0 h-screen w-[1000px] mr-4">
                     <div class="flex items-center justify-center h-5/6 w-5/6 mx-auto rounded-3xl">
-                        <h1 class="text-8xl font-bold mb-4 text-black text-start">Why use <br> co-ownership?</h1>
+                        <h1 class="text-7xl font-bold mb-4 text-text-[#021E05] text-start">How does <br> <span class = "text-[#EBB902]">co-ownership</span> work?</h1>
                     </div>
                 </div>
 
                 <div class="flex-shrink-0 h-5/6 w-[1000px] mr-4 flex items-center justify-center">
-                  <div class="flex flex-col items-center justify-center h-5/6 w-5/6 bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 rounded-3xl text-center">
-                    <h1 class="text-5xl font-bold mb-4 text-white">Shared Cost</h1>
-                    <p class="text-lg text-black max-w-md text-white font-bold">
-                      By dividing expenses such as purchase price, maintenance, and operational costs, co-ownership makes it more affordable for each party involved.
-                    </p>
+                  <div class = "rounded-md border-[0.5px] border-[#021E05] h-5/6 p-10 flex flex-col items-start justify-center">
+                    <div class = "text-start text-3xl font-semibold mb-2">01</div>
+                    <div class = "text-start text-3xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                    <p class = "text-start text-xl text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
                   </div>
                 </div>
 
                 <div class="flex-shrink-0 h-5/6 w-[1000px] mr-4 flex items-center justify-center">
-                  <div class="flex flex-col items-center justify-center h-5/6 w-5/6 bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 rounded-3xl text-center">
-                    <h1 class="text-5xl font-bold mb-4 text-white">Shared Responsibility</h1>
-                    <p class="text-lg text-white max-w-md font-bold">
-                     Ownership duties and decision-making are distributed, making management easier and more collaborative.
-                    </p>
+                  <div class = "rounded-md border-[0.5px] border-[#021E05] h-5/6 p-10 flex flex-col items-start justify-center">
+                    <div class = "text-start text-3xl font-semibold mb-2">02</div>
+                    <div class = "text-start text-3xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                    <p class = "text-start text-xl text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
                   </div>
                 </div>
 
                 <div class="flex-shrink-0 h-5/6 w-[1000px] mr-4 flex items-center justify-center">
-                  <div class="flex flex-col items-center justify-center h-5/6 w-5/6 bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-3xl text-center">
-                    <h1 class="text-5xl font-bold mb-4 text-white">Risk Reduction</h1>
-                    <p class="text-lg text-white max-w-md font-bold">
-                     Losses and risks are shared, which minimizes the impact on any single party.
-                    </p>
+                  <div class = "rounded-md border-[0.5px] border-[#021E05] h-5/6 p-10 flex flex-col items-start justify-center">
+                    <div class = "text-start text-3xl font-semibold mb-2">03</div>
+                    <div class = "text-start text-3xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                    <p class = "text-start text-xl text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
                   </div>
                 </div>
           </div>
+          </div>
+          
+      </div> -->
+
+
+      <!--  Page 1 -->
+
+      <div class = "text-[#021E05] bg-[#FFFBF2] py-28">
+          <div class = "flex w-5/6 px-6 mx-auto flex-col items-start justify-center text-center">
+            <div class = "text-5xl font-semibold mb-20">Lorem ipsum dolor sit amet.</div>
+            <div class = "flex justify-center items-center gap-4">
+              <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 flex flex-col items-start justify-center">
+                <div class = "text-start text-2xl font-semibold mb-2">01</div>
+                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              </div>
+
+              <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 flex flex-col items-start justify-center">
+                <div class = "text-start text-2xl font-semibold mb-2">01</div>
+                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              </div>
+
+              <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 flex flex-col items-start justify-center">
+                <div class = "text-start text-2xl font-semibold mb-2">01</div>
+                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              </div>  
+            </div>
+          </div>
           
       </div>
+
+
+      <div class = "min-h-screen text-[#021E05] bg-[#FFFBF2] py-28">
+          <div class = "flex gap-x-8 w-5/6 px-6 mx-auto items-center justify-center">
+            <div class="relative w-1/4 mb-20 h-full">
+              <!-- Background Image -->
+              <img src="kuta.jpg" alt="Background" class="absolute inset-0 w-full object-cover opacity-30 z-0">
+
+              <!-- Text on top -->
+              <div class="relative top-0 left-0 text-5xl font-semibold text-black z-10">
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+            <div class = "w-3/4 flex flex-col justify-center items-center gap-4">
+              <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 w-full flex flex-col items-start justify-center">
+                <div class = "text-start text-2xl font-semibold mb-2">01</div>
+                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              </div>
+
+              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full p-4 flex flex-col items-start justify-center">
+                <div class = "text-start text-2xl font-semibold mb-2">01</div>
+                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              </div>
+
+              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full p-4 flex flex-col items-start justify-center">
+                <div class = "text-start text-2xl font-semibold mb-2">01</div>
+                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
+                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              </div>  
+            </div>
+          </div>
+          
+      </div>
+
+      <!-- Page 2 -->
         
-      <div class="text-[#FFFBF2] font-bold text-2xl mb-10">A Curated Real Estate Portfolio</div>
-      <p class="text-[#FFFBF2] w-[70%] mx-auto mb-20" >Pacaso’s portfolio of elite vacation homes spans more than 40 markets around the world. We apply our sophisticated eye to interior design, art selection, home amenities and ongoing estate management.</p>
-
-
-        <div>
-            <div class="w-[70%] relative mx-auto px-4 h-[69vh] md:h-[50vh] lg:h-[45vh] xl:h-[70vh] mb-16">
+      <div class = "text-[#FFFBF2] min-h-screen bg-[#021E05] py-28">
+      <div class="text-[#FFFBF2] font-bold text-2xl 2xl:text-3xl mb-10 text-center w-full">A Curated Real Estate Portfolio</div>
+      <p class="text-[#FFFBF2] 2xl:text-lg w-[70%] mx-auto mb-20 text-center" >Pacaso’s portfolio of elite vacation homes spans more than 40 markets around the world. We apply our sophisticated eye to interior design, art selection, home amenities and ongoing estate management.</p>
+        <div class="w-[70%] relative mx-auto px-4 h-[69vh] md:h-[50vh] lg:h-[45vh] xl:h-[70vh] mb-16">
                 <!-- Carousel Content -->
                 <div class="overflow-x-hidden overflow-y-hidden relative h-[65vh] md:h-[50vh] lg:h-[40vh] xl:h-[57vh]">
-                    <div id="carousel-track" class="flex gap-x-[20px] transition-transform duration-500 items-stretch h-full">
+                    <div id="carousel-track" class="flex gap-x-[13px] 2xl:gap-x-[15px] transition-transform duration-500 items-stretch h-full">
                         <!-- Card 1 -->
                         <a href="learn-more.html" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
-                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa1.jpg" alt="Sunset in the mountains">
+                          <div class = "rounded-lg mt-2 ml-2 mr-2 overflow-hidden aspect-[3/2]">
+                            <img class="w-full object-cover" src="/villa1.jpg" alt="Sunset in the mountains">
+                          </div>
+
+
                           
-                          <div class="flex flex-col justify-between flex-1 pb-6 pt-4 px-6">
+                          <div class="flex flex-col justify-between flex-1 pb-6 pt-3 px-4">
                             <div>
-                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa 1</h2>
-                              <p class="text-start text-sm text-[#253A28]"><span class = "font-semibold">$900,000</span> <span class="ml-2">1/8 ownership</span></p>
-                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">5 <i class="fa-solid fa-bed"></i> | 6 <i class="fa-solid fa-bath"></i> | 4,761 sq ft</p>
-                              <p class="leading-tight text-sm text-start text-[#253A28]">127 Blue Heron Pond Rd, Kiawah Island, SC 29455</p>
+                              <h2 class="text-xl 2xl:text-2xl text-start mb-2 font-semibold text-[#253A28]">Villa 1</h2>
+                              <p class="text-start text-sm 2xl:text-base text-[#253A28]"><span class = "font-semibold">$900,000</span> <span class="ml-2">1/8 ownership</span></p>
+                              <p class="text-start text-sm 2xl:text-base font-medium mb-3 text-[#253A28]">5 <i class="fa-solid fa-bed"></i> | 6 <i class="fa-solid fa-bath"></i> | 4,761 sq ft</p>
+                              <p class="leading-tight text-sm 2xl:text-base text-start text-[#253A28]">127 Blue Heron Pond Rd, Kiawah Island, SC 29455</p>
                             </div>
                           </div>
                         </a>
@@ -197,10 +291,10 @@
                           <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa2.jpg" alt="Sunset in the mountains">
                           <div class="flex flex-col justify-between flex-1 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa 7</h2>
-                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$1,250,000</span> <span class="ml-2">1/4 ownership</span></p>
-                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">4 <i class="fa-solid fa-bed"></i> | 5 <i class="fa-solid fa-bath"></i> | 5,230 sq ft</p>
-                              <p class="leading-tight text-sm text-start text-[#253A28]">88 Sunset Bluff Dr, Big Sky, MT 59716</p>
+                              <h2 class="text-xl 2xl:text-2xl text-start mb-2 font-semibold text-[#253A28]">Villa 7</h2>
+                              <p class="text-start text-sm 2xl:text-base text-[#253A28]"><span class="font-semibold">$1,250,000</span> <span class="ml-2">1/4 ownership</span></p>
+                              <p class="text-start text-sm 2xl:text-base font-medium mb-3 text-[#253A28]">4 <i class="fa-solid fa-bed"></i> | 5 <i class="fa-solid fa-bath"></i> | 5,230 sq ft</p>
+                              <p class="leading-tight text-sm 2xl:text-base text-start text-[#253A28]">88 Sunset Bluff Dr, Big Sky, MT 59716</p>
                             </div>
                           </div>
                         </a>
@@ -210,10 +304,10 @@
                           <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa3.jpg" alt="Sunset in the mountains">
                           <div class="flex flex-col justify-between flex-1 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa Serenity</h2>
-                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$780,000</span> <span class="ml-2">1/10 ownership</span></p>
-                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">3 <i class="fa-solid fa-bed"></i> | 4 <i class="fa-solid fa-bath"></i> | 3,600 sq ft</p>
-                              <p class="leading-tight text-start text-sm text-[#253A28]">15 Ocean Breeze Way, Malibu, CA 90265</p>
+                              <h2 class="text-xl 2xl:text-2xl text-start mb-2 font-semibold text-[#253A28]">Villa Serenity</h2>
+                              <p class="text-start text-sm 2xl:text-base text-[#253A28]"><span class="font-semibold">$780,000</span> <span class="ml-2">1/10 ownership</span></p>
+                              <p class="text-start text-sm 2xl:text-base font-medium mb-3 text-[#253A28]">3 <i class="fa-solid fa-bed"></i> | 4 <i class="fa-solid fa-bath"></i> | 3,600 sq ft</p>
+                              <p class="leading-tight text-start text-sm 2xl:text-base text-[#253A28]">15 Ocean Breeze Way, Malibu, CA 90265</p>
                             </div>
                           </div>
                         </a>
@@ -223,10 +317,10 @@
                           <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa4.jpg" alt="Sunset in the mountains">
                           <div class="flex flex-col justify-between h-2/5 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa Horizon</h2>
-                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$2,150,000</span> <span class="ml-2">1/6 ownership</span></p>
-                              <p class="text-start text-sm font-medium mb-3 text-[#253A28]">6 <i class="fa-solid fa-bed"></i> | 7 <i class="fa-solid fa-bath"></i> | 7,100 sq ft</p>
-                              <p class="leading-tight text-start text-sm text-[#253A28]">302 Palm Drive, Naples, FL 34102</p>
+                              <h2 class="text-xl 2xl:text-2xl text-start mb-2 font-semibold text-[#253A28]">Villa Horizon</h2>
+                              <p class="text-start text-sm 2xl:text-base text-[#253A28]"><span class="font-semibold">$2,150,000</span> <span class="ml-2">1/6 ownership</span></p>
+                              <p class="text-start text-sm 2xl:text-base font-medium mb-3 text-[#253A28]">6 <i class="fa-solid fa-bed"></i> | 7 <i class="fa-solid fa-bath"></i> | 7,100 sq ft</p>
+                              <p class="leading-tight text-start text-sm 2xl:text-base text-[#253A28]">302 Palm Drive, Naples, FL 34102</p>
                             </div>
                           </div>
                         </a>
@@ -236,10 +330,10 @@
                           <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa5.jpg" alt="Sunset in the mountains">
                           <div class="flex flex-col justify-between h-2/5 pb-6 pt-4 px-6">
                             <div>
-                              <h2 class="text-xl text-start mb-2 font-semibold text-[#253A28]">Villa Nova</h2>
-                              <p class="text-start text-sm text-[#253A28]"><span class="font-semibold">$985,000</span> <span class="ml-2">1/8 ownership</span></p>
-                              <p class="text-start font-medium text-sm mb-3 text-[#253A28]">4 <i class="fa-solid fa-bed"></i> | 5 <i class="fa-solid fa-bath"></i> | 4,020 sq ft</p>
-                              <p class="leading-tight text-start text-sm text-[#253A28]">219 Maple Ridge Ln, Aspen, CO 81611</p>
+                              <h2 class="text-xl 2xl:text-2xl text-start mb-2 font-semibold text-[#253A28]">Villa Nova</h2>
+                              <p class="text-start text-sm 2xl:text-base text-[#253A28]"><span class="font-semibold">$985,000</span> <span class="ml-2">1/8 ownership</span></p>
+                              <p class="text-start font-medium text-sm 2xl:text-base mb-3 text-[#253A28]">4 <i class="fa-solid fa-bed"></i> | 5 <i class="fa-solid fa-bath"></i> | 4,020 sq ft</p>
+                              <p class="leading-tight text-start text-sm 2xl:text-base text-[#253A28]">219 Maple Ridge Ln, Aspen, CO 81611</p>
                             </div>
                           </div>
                         </a>
@@ -261,9 +355,13 @@
                     </svg>
                 </button>
                 <br>
-                <a class="text-black font-semibold hover:font-bold text-2xl underline select-none">SEE ALL</a>
-
-            </div>
+                <div class = "w-full flex items-center justify-center">
+                <button class = "mt-5 w-fit text-lg 2xl:text-xl px-4 py-2 border-[1px] border-[#EBB902] hover:bg-[#EBB902] hover:text-[#FFFBF2] transition duration-300">Explore All</a>
+                </div>
+        </div>
+      </div>
+        <div>
+            
 
             <hr class="border-gray-300" />
 
@@ -702,11 +800,11 @@
     ([entry]) => {
       if (entry.isIntersecting) {
         // Hero masih terlihat
-        navbar_web.classList.remove('bg-[#2f4233]', 'shadow-md');
+        navbar_web.classList.remove('bg-[#021E05]', 'shadow-md');
         navbar_web.classList.add('bg-transparent');
       } else {
         // Sudah scroll lewat hero
-        navbar_web.classList.add('bg-[#2f4233]', 'shadow-md');
+        navbar_web.classList.add('bg-[#021E05]', 'shadow-md');
         navbar_web.classList.remove('bg-transparent');
       }
     },
@@ -734,6 +832,18 @@
     scrollTrigger: {
       trigger: "#hero-text",
       start: "top top+=250", 
+       end: "+=200",  
+      scrub: true,    
+    },
+    y: 100,        
+    opacity: 0,         
+    ease: "none"
+  });
+
+    gsap.to("#hero-button", {
+    scrollTrigger: {
+      trigger: "#hero-button",
+      start: "top top+=350", 
        end: "+=200",  
       scrub: true,    
     },
