@@ -13,20 +13,29 @@
 <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet"> 
 
 <!-- Urbanist -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
                 
 
   <style>
     body{
       /* Open Sauce */
-      /* font-family: 'Open Sauce One', sans-serif; */
+      font-family: 'Open Sauce One', sans-serif;
 
       /* Urbanist */
-      font-family: "Urbanist", sans-serif;
+      /* font-family: "Urbanist", sans-serif;
       font-optical-sizing: auto;
-      font-style: normal; 
+      font-style: normal;  */
+    }
+
+
+    h1, h2, h3, h4, h5{
+      font-family: "Noto Serif Display", serif;
+      font-optical-sizing: auto;
+      font-variation-settings:
+      "wght" 600,
+      "wdth" 100;
     }
 
     .nav-hidden {
@@ -108,15 +117,15 @@
   <nav id="navbar" class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-4 2xl:py-6 shadow-sm transition-transform duration-300 bg-[#021E05]">
     
     <div class="flex items-center justify-between w-5/6 mx-auto">
-      <div class="text-[#FFFBF2] hover:text-[#E5DFC9] text-xl xl:text-2xl 2xl:text-3xl font-bold">MyBrand</div>
+      <div class="text-[#FFFBF2] hover:text-[#EBB902] text-xl xl:text-2xl 2xl:text-3xl font-bold">MyBrand</div>
       <ul class="hidden md:flex space-x-6 text-white font-medium">
-        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Home</a></li>
-        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">About</a></li>
-        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Services</a></li>
-        <li><a href="#" class="text-[#FFFBF2] hover:text-[#E5DFC9] hover:font-bold transition font-semibold 2xl:text-xl">Contact</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#EBB902] hover:font-bold transition font-semibold 2xl:text-xl">Home</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#EBB902] hover:font-bold transition font-semibold 2xl:text-xl">About</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#EBB902] hover:font-bold transition font-semibold 2xl:text-xl">Services</a></li>
+        <li><a href="#" class="text-[#FFFBF2] hover:text-[#EBB902] hover:font-bold transition font-semibold 2xl:text-xl">Contact</a></li>
         <li>
           <button onclick="toggleModal()" class="focus:outline-none">
-            <i class="fa-solid fa-circle-user text-[#FFFBF2] hover:text-[#E5DFC9] text-xl 2xl:text-2xl"></i>
+            <i class="fa-solid fa-circle-user text-[#FFFBF2] hover:text-[#EBB902] text-xl 2xl:text-2xl"></i>
           </button>
         </li>
       </ul>
@@ -164,33 +173,59 @@
 
 
       <div class = "min-h-screen text-[#021E05] bg-[#FFFBF2] py-28">
-          <div class = "flex gap-x-8 w-5/6 px-6 mx-auto items-center justify-center h-[57vh]">
-            <div class="relative w-1/4 h-full">
+          <div 
+          class = "grid grid-cols-1 md:grid-cols-3 w-5/6 px-16 mx-auto gap-4">
+          <!-- class = "flex gap-x-8 w-5/6 px-6 mx-auto items-center justify-center h-[57vh]" -->
+            <div class="relative col-span-1 h-full rounded-md overflow-hidden">
               <!-- Background Image -->
-              <img src="kuta.jpg" alt="Background" class="absolute h-[57vh] inset-0 w-full object-cover opacity-60 z-0">
+              <img src="kuta.jpg" alt="Background" class="absolute h-full inset-0 w-full object-cover z-0">
+
+              <div class="absolute h-full inset-0 w-full bg-black object-cover opacity-60 z-2"></div>
 
               <!-- Text on top -->
-              <div class="relative text-5xl font-semibold text-black z-10">
-                Lorem ipsum dolor sit amet.
-              </div>
+              <h1 class="relative text-5xl 2xl:text-6xl font-semibold text-[#FFFBF2] p-4 z-10">
+                How does <span class = "text-[#EBB902]">Sakanta</span> work?
+              </h1>
             </div>
-            <div class = "w-3/4 flex flex-col justify-center items-center gap-4">
-              <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 w-full flex flex-col items-start justify-center">
-                <div class = "text-start text-2xl font-semibold mb-2">01</div>
-                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
-                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+            <div class = "col-span-2 flex flex-col justify-center items-center gap-4">
+              <div class = "rounded-md border-[0.5px] border-[#021E05] p-4 w-fuxl6 py-6 grid grid-cols-8 gap-x-6 items-center justify-center">
+                <div class = "col-span-1 text-start flex justify-center items-center font-semibold h-full text-6xl 2xl:text-7xl">01</div>
+                <div class = "col-span-7 flex flex-col">
+                  <div class = "text-start text-xl 2xl:text-2xl font-semibold mb-2">Discover & Co-Own</div>
+                  <p class = "text-start text-md 2xl:text-lg text-[#021E05]">Explore our handpicked collection of beautiful homes. Pay for the share you need and own a slice of paradise without the full burden of cost.</p>
+                </div>
               </div>
 
-              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full p-4 flex flex-col items-start justify-center">
-                <div class = "text-start text-2xl font-semibold mb-2">01</div>
-                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
-                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full px-6 py-6 grid grid-cols-8 gap-x-6 items-start justify-center">
+                <div class = "col-span-1 text-start flex justify-center items-center font-semibold h-full text-6xl 2xl:text-7xl">02</div>
+                <div class = "col-span-7 flex flex-col">
+                  <div class = "text-start text-xl 2xl:text-2xl font-semibold mb-2">Plan Your Stays, Fairly</div>
+                  <p class = "text-start text-md 2xl:text-lg text-[#021E05]">Our smart scheduling system ensures that your time in the home reflects your ownership. Own 1/8? Enjoy 1/8 of the year—distributed fairly and flexibly.</p>
+                </div>
               </div>
 
-              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full p-4 flex flex-col items-start justify-center">
-                <div class = "text-start text-2xl font-semibold mb-2">01</div>
-                <div class = "text-start text-2xl font-semibold mb-2">Lorem ipsum dolor sit amet.</div>
-                <p class = "text-start text-lg text-[#021E05]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, impedit?</p>
+              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full px-6 py-6 grid grid-cols-8 gap-x-6 items-start justify-center">
+                <div class = "col-span-1 text-start flex justify-center items-center font-semibold h-full text-6xl 2xl:text-7xl">03</div>
+                <div class = "col-span-7 flex flex-col">
+                  <div class = "text-start text-xl 2xl:text-2xl font-semibold mb-2">Hassle-Free Living</div>
+                  <p class = "text-start text-md 2xl:text-lg text-[#021E05]">Leave the upkeep to us. From regular maintenance to on-call support, our professional concierge team ensures your home stays in top shape—so you can simply arrive and relax.</p>
+                </div>
+              </div>  
+
+              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full px-6 py-6 grid grid-cols-8 gap-x-6 items-start justify-center">
+                <div class = "col-span-1 text-start flex justify-center items-center font-semibold h-full text-6xl 2xl:text-7xl">04</div>
+                <div class = "col-span-7 flex flex-col">
+                  <div class = "text-start text-xl 2xl:text-2xl font-semibold mb-2">Co-Create Your Home</div>
+                  <p class = "text-start text-md 2xl:text-lg text-[#021E05]">You’re not just a guest—you’re a co-owner. Sakanta’s transparent voting system gives every co-owner a voice. Want to propose an upgrade or add a personal touch? If no one objects, it’s a go.</p>
+                </div>
+              </div>  
+
+              <div class = "rounded-md border-[0.5px] border-[#021E05] w-full px-6 py-6 grid grid-cols-8 gap-x-6 items-start justify-center">
+                <div class = "col-span-1 text-start flex justify-center items-center font-semibold h-full text-6xl 2xl:text-7xl">05</div>
+                <div class = "col-span-7 flex flex-col">
+                  <div class = "text-start text-xl 2xl:text-2xl font-semibold mb-2">Resell When You're Ready</div>
+                  <p class = "text-start text-md 2xl:text-lg text-[#021E05]">No longer using your share or want to adjust your investment? List your share at your chosen price—Sakanta helps connect you with new co-owners and ensures a smooth resale process.</p>
+                </div>
               </div>  
             </div>
           </div>
@@ -200,17 +235,15 @@
       <!-- Page 2 -->
         
       <div class = "text-[#FFFBF2] min-h-screen bg-[#021E05] py-28">
-      <div class="text-[#FFFBF2] font-bold text-2xl 2xl:text-3xl mb-10 text-center w-full">A Curated Real Estate Portfolio</div>
-      <p class="text-[#FFFBF2] 2xl:text-lg w-[70%] mx-auto mb-20 text-center" >Pacaso’s portfolio of elite vacation homes spans more than 40 markets around the world. We apply our sophisticated eye to interior design, art selection, home amenities and ongoing estate management.</p>
+      <h1 class="text-[#FFFBF2] font-bold text-3xl 2xl:text-4xl mb-10 text-center w-full">A Portfolio Designed For Your <span class = "text-[#EBB902]"> Wellbeing </span></h1>
+      <p class="text-[#FFFBF2] 2xl:text-lg w-[70%] mx-auto mb-20 text-center" >Sakanta offers a thoughtfully curated selection of homes located in Bali’s most sought-after destinations. Each property is chosen not only for its beauty and comfort but also for its surroundings.</p>
         <div class="w-[70%] relative mx-auto px-4 h-[69vh] md:h-[50vh] lg:h-[45vh] xl:h-[70vh] mb-16">
                 <!-- Carousel Content -->
                 <div class="overflow-x-hidden overflow-y-hidden relative h-[65vh] md:h-[50vh] lg:h-[40vh] xl:h-[57vh]">
                     <div id="carousel-track" class="flex gap-x-[13px] 2xl:gap-x-[15px] transition-transform duration-500 items-stretch h-full">
                         <!-- Card 1 -->
                         <a href="learn-more.html" class="min-w-full md:min-w-[48%] lg:min-w-[32%] rounded-lg shadow-lg h-full flex flex-col bg-[#FFFBF2] text-[#21281F]">
-                          <div class = "rounded-lg mt-2 ml-2 mr-2 overflow-hidden aspect-[3/2]">
-                            <img class="w-full object-cover" src="/villa1.jpg" alt="Sunset in the mountains">
-                          </div>
+                          <img class="w-full object-cover aspect-[3/2] rounded-t-lg" src="/villa1.jpg" alt="Sunset in the mountains">
 
 
                           
@@ -280,18 +313,19 @@
                 </div>
 
                 <!-- Left Arrow -->
-                <button onclick="prevSlide()" class="absolute top-[25%] -translate-y-1/2 left-[-5%] bg-white p-3 rounded-full shadow hover:bg-gray-100 border-r">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button onclick="prevSlide()" class="absolute top-[40%] -translate-y-1/2 left-[-5%] p-3 rounded-full shadow hover:bg-[#EBB902] text-[#EBB902] hover:text-[#021E05] transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
 
                 <!-- Right Arrow -->
-                <button onclick="nextSlide()" class="absolute top-[25%] -translate-y-1/2 right-[-5%] bg-white p-3 rounded-full shadow hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button onclick="nextSlide()" class="absolute top-[40%] -translate-y-1/2 right-[-5%] p-3 rounded-full shadow hover:bg-[#EBB902] text-[#EBB902] hover:text-[#021E05] transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
+
                 <br>
                 <div class = "w-full flex items-center justify-center">
                 <button class = "mt-5 w-fit text-lg 2xl:text-xl px-4 py-2 border-[1px] border-[#EBB902] hover:bg-[#EBB902] hover:text-[#FFFBF2] transition duration-300">Explore All</a>
@@ -304,9 +338,9 @@
 
 
       <div class = "min-h-screen text-[#021E05] bg-[#FFFBF2] py-28">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 p-4 h-[100vh] w-[65%] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 h-[80vh] w-[65%] mx-auto">
               
-              <div class="flex flex-col gap-2 p-2 h-5/6">
+              <div class="flex flex-col gap-2 p-2">
                 <div class="h-1/4 text-2xl md:text-3xl lg:text-4xl font-bold text-start">
                     Browse<br>your <br>destinations.
                 </div>
@@ -321,7 +355,7 @@
               </div>
 
               
-                <div class="p-2 h-5/6">
+                <div class="p-2">
                   <div class="relative rounded-xl overflow-hidden h-full">
                     <img class="w-full object-cover h-full rounded-xl" data-aos="fade-down" src="/seminyak.png" alt="Sunset in the mountains">
                     
@@ -331,7 +365,7 @@
                   </div>
                 </div>
               
-                <div class="flex flex-col gap-2 p-2 h-5/6">
+                <div class="flex flex-col gap-2 p-2">
                   <div class="relative rounded-xl overflow-hidden h-[90%]">
                     <img class="w-full object-cover h-full rounded-xl" data-aos="fade-left" src="/kuta.png" alt="Sunset in the mountains">
                     
@@ -363,16 +397,16 @@
                     </div>
                     <div class="w-full lg:w-2/3">
                       <div class="w-full">
-                        <div class="mb-6 lg:mb-16">
+                        <div class="mb-6">
                           <h6
                             class="text-lg text-center font-medium mb-2 lg:text-left text-[#EBB902]"
                           >
-                            faqs
+                            FAQ's
                           </h6>
                           <h2
-                            class="text-4xl text-center font-bold text-[#FAF3E1] leading-[3.25rem] mb-5 lg:text-left"
+                            class="text-4xl text-center font-bold text-[#FAF3E1] leading-[3.25rem] lg:text-left"
                           >
-                            Looking for answers?
+                            Still confused?
                           </h2>
                         </div>
                         <div class="accordion-group" data-accordion="default-accordion">
@@ -384,7 +418,7 @@
                               class="accordion-toggle group inline-flex items-center justify-between font-normal text-xl leading-8 text-gray-600 w-full transition duration-500 text-[#FAF3E1] hover:text-[#EBB902] accordion-active:text-[#EBB902] accordion-active:font-medium"
                               aria-controls="basic-collapse-one-with-arrow-always-open"
                             >
-                              <h5 class="text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">Have any trust issue?</h5>
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">Have any trust issue?</h5>
                               <svg
                                 class="transition duration-500 text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active:rotate-180"
                                 width="22"
@@ -424,7 +458,7 @@
                               class="accordion-toggle group inline-flex items-center justify-between font-normal text-xl leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:font-medium"
                               aria-controls="basic-collapse-two-with-arrow-always-open"
                             >
-                              <h5 class="text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">Have any trust issue?</h5>
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">Have any trust issue?</h5>
                               <svg
                                 class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
                                 width="22"
@@ -464,7 +498,7 @@
                               class="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                               aria-controls="basic-collapse-three-with-arrow-always-open"
                             >
-                              <h5 class="text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">How can I reset my password?</h5>
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">How can I reset my password?</h5>
                               <svg
                                 class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
                                 width="22"
@@ -503,7 +537,7 @@
                               class="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                               aria-controls="basic-collapse-four-with-arrow-always-open"
                             >
-                              <h5 class="text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">What is the payment process?</h5>
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">What is the payment process?</h5>
                               <svg
                                 class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
                                 width="22"
@@ -542,7 +576,206 @@
       </div>
 
 
-        <div>
+
+      <!-- Page 5 -->
+
+
+      <div class="min-h-screen text-[#FFFBF2] bg-[#021E05] py-28">
+                <div class="mx-auto w-5/6 px-16">
+                  <div
+                    class="flex flex-col justify-center items-center gap-16 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full"
+                  >
+                    <div class="w-full xl:w-1/3 h-full">
+                      <img
+                        src="faq.jpg"
+                        alt="FAQ tailwind section"
+                        class="w-full rounded-xl object-cover h-[80vh]"
+                        data-aos="fade-down"
+                      />
+                    </div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full">
+                        <div class="mb-6">
+                          <h6
+                            class="text-lg text-center font-medium mb-2 lg:text-left text-[#EBB902]"
+                          >
+                            FAQ's
+                          </h6>
+                          <h2
+                            class="text-4xl text-center font-bold text-[#FAF3E1] leading-[3.25rem] lg:text-left"
+                          >
+                            Still confused?
+                          </h2>
+                        </div>
+                        <div class="accordion-group" data-accordion="default-accordion">
+                          <div
+                            class="accordion py-8 border-b border-solid border-gray-200 faq"
+                            id="basic-heading-one-with-arrow-always-open"
+                          >
+                            <button
+                              class="accordion-toggle group inline-flex items-center justify-between font-normal text-xl leading-8 text-gray-600 w-full transition duration-500 text-[#FAF3E1] hover:text-[#EBB902] accordion-active:text-[#EBB902] accordion-active:font-medium"
+                              aria-controls="basic-collapse-one-with-arrow-always-open"
+                            >
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">Have any trust issue?</h5>
+                              <svg
+                                class="transition duration-500 text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active:rotate-180"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                  stroke="currentColor"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </svg>
+                            </button>
+                            <div
+                              id="basic-collapse-one-with-arrow-always-open"
+                              class="accordion-content w-full px-0 overflow-hidden pr-4"
+                              aria-labelledby="basic-heading-one-with-arrow-always-open"
+                              style=""
+                            >
+                              <p class="text-base text-[#C7CEA5] font-normal text-start">
+                                Our focus on providing robust and user-friendly content
+                                management capabilities ensures that you can manage your
+                                content with confidence, and achieve your content
+                                marketing goals with ease.
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="accordion py-8 border-b border-solid border-gray-200 "
+                            id="basic-heading-two-with-arrow-always-open"
+                          >
+                            <button
+                              class="accordion-toggle group inline-flex items-center justify-between font-normal text-xl leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:font-medium"
+                              aria-controls="basic-collapse-two-with-arrow-always-open"
+                            >
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">Have any trust issue?</h5>
+                              <svg
+                                class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                  stroke="currentColor"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </svg>
+                            </button>
+                            <div
+                              id="basic-collapse-two-with-arrow-always-open"
+                              class="accordion-content w-full px-0 overflow-hidden pr-4"
+                              aria-labelledby="basic-heading-two-with-arrow-always-open"
+                              style=""
+                            >
+                              <p class="text-base text-gray-500 font-normal text-start">
+                                Our focus on providing robust and user-friendly content
+                                management capabilities ensures that you can manage your
+                                content with confidence, and achieve your content
+                                marketing goals with ease.
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="accordion py-8 border-b border-solid border-gray-200"
+                            id="basic-heading-three-with-arrow-always-open"
+                          >
+                            <button
+                              class="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                              aria-controls="basic-collapse-three-with-arrow-always-open"
+                            >
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">How can I reset my password?</h5>
+                              <svg
+                                class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                  stroke="currentColor"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </svg>
+                            </button>
+                            <div
+                              id="basic-collapse-three-with-arrow-always-open"
+                              class="accordion-content w-full px-0 overflow-hidden pr-4"
+                              aria-labelledby="basic-heading-three-with-arrow-always-open"
+                            >
+                              <p class="text-base text-gray-500 font-normal text-start">
+                                Our focus on providing robust and user-friendly content
+                                management capabilities ensures that you can manage your
+                                content with confidence, and achieve your content
+                                marketing goals with ease.
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="accordion py-8 "
+                            id="basic-heading-four-with-arrow-always-open"
+                          >
+                            <button
+                              class="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                              aria-controls="basic-collapse-four-with-arrow-always-open"
+                            >
+                              <h5 class="text-base text-[#FAF3E1] group-hover:text-[#EBB902] accordion-active">What is the payment process?</h5>
+                              <svg
+                                class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                  stroke="currentColor"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </svg>
+                            </button>
+                            <div
+                              id="basic-collapse-four-with-arrow-always-open"
+                              class="accordion-content w-full px-0 overflow-hidden pr-4"
+                              aria-labelledby="basic-heading-four-with-arrow-always-open"
+                            >
+                              <p class="text-base text-gray-500 font-normal text-start">
+                                Our focus on providing robust and user-friendly content
+                                management capabilities ensures that you can manage your
+                                content with confidence, and achieve your content
+                                marketing goals with ease.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+
+
+
+      <div>
             
 
             
@@ -689,7 +922,7 @@
       </div>
       </footer>
 
-        </div> 
+      </div> 
     </div> 
   </div>
 
